@@ -1,0 +1,21 @@
+# How has usage of the term democracy shifted over time in American newspapers?
+
+## Dataset construction
+
+`build_dataset_target` scrapes ALL articles mentioning 'democracy' or 'republic' from the
+American Stories dataset and saves article data in `articles.target.tsv` and individual sentences in `sentences.target.tsv`.
+
+`build_dataset_sample` scrapes a random sample of all articles in the American Stories dataset and saves article data in `articles.sample.10k.tsv` and individual sentences in `sentences.sample.10k.tsv`. The random sample size is basically either 10k articles per year or less, if there is less data in the dataset for that year.
+
+`build_dataset_summary` collects article and word count per year per newspaper and saves the data in `summary_counts.tsv`
+
+`view_ngrams` views the top ngrams related to 'democracy' and 'republic.' This is useful for 
+excluding mentions of republic that are just uses of "french republic," etc.
+
+`lib` includes helper functions common to build files
+
+## Analysis
+
+`analysis.Rmd` looks at the prevalence of terms over time
+
+TODO: sentiment analysis at the sentence level
